@@ -192,7 +192,7 @@ BOOL PEExtend::DetectExitProcedure (hde32s *hde, DWORD dwOffset) {
 	    !strcmp ((char *) lpFunctionName, "_exit")))
 		return TRUE;
 
-	lpFunctionName = GetFunctionName (hde, dwOffset, (LPCSTR) "Kernel32.dll");
+	lpFunctionName = GetFunctionName (hde, dwOffset, (LPCSTR) "kernel32.dll");
 
 	if (lpFunctionName != NULL && 
 	    (!strcmp ((char *) lpFunctionName, "ExitProcess")))
